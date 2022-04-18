@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 rm ./*.profraw
-export RUSTFLAGS="-Zinstrument-coverage -C instrument-coverage -C link-dead-code"
+export RUSTFLAGS="-C instrument-coverage -C link-dead-code"
 export LLVM_PROFILE_FILE="lsp-v2-%p-%m.profraw"
 cargo build
 cargo test
